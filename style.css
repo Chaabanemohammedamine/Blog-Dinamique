@@ -1,0 +1,224 @@
+body{ 
+    font-family: 'Kiwi Maru', serif;
+    font-size: 15px;
+}
+span{
+    color: rgb(0, 0, 0);
+}
+/* Home */
+#main {
+    background: url("./image/home.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+.home h1{
+    margin-left: 200px;
+    margin-top: 100px;
+    color:rgba(255, 255, 255, 0.849);
+}
+.text-start{
+    color: rgb(255, 255, 255);
+    margin-top: 70px;
+    margin-left: 100px;
+    text-align:center;
+    font-size: 20px;
+}
+.myhome {
+    border-radius: 20px;
+    margin-left: 650px;
+    margin-top: 70px;
+    border-bottom: black;
+    margin-bottom: 50px;
+}
+   /* Footer */
+  
+   #footer {   
+    background-color: rgb(111, 120, 145);
+    
+}
+  
+.footer-icon {
+    font-size: 2rem;
+    color: #000000;
+    padding: .2rem;
+    background-color: rgb(111, 120, 145);
+}
+/* #footer p{
+    margin-top: 7%;
+    margin-right: 45%;
+} */
+/* About */
+#main1 {
+    background: url("./image/About.jpg");
+    background-size: cover;
+    
+}
+.about{
+   text-align: center;
+   color: aliceblue;
+}
+.myabout{
+    margin-left: 65%;
+    margin-top: 5%;
+}
+/* Blog */
+#main2 {
+    background: url("./image/Blog.jpg");
+    background-size: cover;
+    
+}
+
+.col{
+    margin-top: 50px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+
+.row{
+    display: flex;
+    
+    
+}
+/* contact */ 
+#main3 {
+    background: url("./image/contact.jpg");
+    background-size: cover;
+  }
+  /* style du contenu */
+.contact1{
+    margin-bottom: 50px;
+}
+.col{
+    margin-top: 50px;
+}
+.text p{
+    color: rgb(255, 255, 255);
+    
+  }
+  .contact{
+      position: relative;
+      min-height: 90vh;
+      padding: 50px 100px;
+  }
+  .contact .content{
+      max-width: 800;
+      text-align: center;
+  }
+  .contact .content h2{
+      font-size: 36px;
+      font-weight: bold;
+      color:rgb(255, 255, 255);
+  }
+  .contact .content P{
+      font-size: 20px;
+      font-weight: 300;
+      color:rgb(255, 255, 255);
+  }
+  .container3{
+      width: 100%;
+    
+      justify-content: center;
+      align-items: center;
+  
+  }
+  .container3 .contactInfo{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+  }
+  .container3 .contactInfo .box{
+      position: relative;
+      padding: 20px 0;
+      display: flex;
+  }
+  .container3 .contactInfo .box .icon {
+      min-width: 60px;
+     
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      height: 32px;
+      color: #ffffff;
+      margin-top: 20px;
+      
+  }
+  .container3 .contactInfo .box .text{
+      margin-left: 10px;
+      font-size: 16px;
+      font-weight: 300;
+  }
+  .contactForm{
+      width: 40%;
+      padding: 40px;
+      border: 1px solid #d1cfcf;
+  }
+  .contactForm h2{
+      font-size: 30px;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+  }
+  .contactForm .inputBox{
+      position: relative;
+      width: 100%;
+      margin-top: 10px;
+  }
+  .contactForm .inputBox input,.contactForm .inputBox textarea
+  {
+      width: 100%;
+      padding: 5px 0;
+      font-size: 16px;
+      margin: 10px 0;
+      border:none ;
+      border-bottom: 1px solid #ffffff;
+      resize: none;
+      color: rgb(0, 0, 0);
+     
+  }
+  
+  .contactForm .inputBox input[type="submit"]{
+      width: 150px;
+      background: none;
+      border: 1px solid #ded4d4;
+      cursor: pointer;
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 20px;
+      display: block;
+      margin: auto;
+      color: #ffffff;
+}
+.inputBox span{
+    color: rgb(255, 255, 255);
+  }
+   
+  
+h3{
+    font-weight: bold;
+    color: rgb(255, 253, 253);
+}
+/* view*/
+#main4 {
+    background: url("./image/view.jpg");
+    background-size: cover;
+   
+}
+ .gris{
+    color: rgb(104, 100, 100);
+}
+/* Error*/
+#main5 {
+    background: url("./image/Error.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+.error{
+    color: #ffff;
+    font-size: 70px;
+    text-align: center;
+    margin-top: 70px;
+}
+.Error{
+    margin-top: 250px;
+    margin-left: 650px;
+}
