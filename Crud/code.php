@@ -6,11 +6,10 @@ $connection = mysqli_connect("localhost","root","","registration");
 if(isset($_POST['registerbtn']))
 {
     $Title = $_POST['title'];
-    $Camera = $_POST['camera'];
+    $Image = $_POST['image'];
     $Photographe = $_POST['photographe'];
-    $Date = $_POST['date'];
 
-        $query = "INSERT INTO post (title,camera,photographe,date) VALUES ('$Title','$Camera','$Photographe','$Date')";
+        $query = "INSERT INTO posts (title,image,photographe,) VALUES ('$Title','$image','$Photographe')";
         $query_run = mysqli_query($connection, $query);
 
         if($query_run)
@@ -37,11 +36,10 @@ if(isset($_POST['updatebtn']))
 {
     $id = $_POST['edit_id'];
     $Title = $_POST['edit_title'];
-    $Camera = $_POST['edit_camera'];
+    $Image = $_POST['edit_image'];
     $Photographe = $_POST['edit_photographe'];
-    $Date = $_POST['edit_date'];
 
-    $query = "UPDATE post SET title='$Title', camera='$Camera', photographe='$Photographe',date='$Date' WHERE id='$id'";
+    $query = "UPDATE posts SET title='$Title', image='$Image', photographe='$Photographe' WHERE id='$id'";
     $query_run = mysqli_query($connection,$query);
 
     if($query_run)
@@ -62,7 +60,7 @@ if(isset($_POST['updatebtn']))
 if(isset($_POST['delete_btn']))
 {
     $id = $_POST['delete_id'];
-    $query = "DELETE FROM post WHERE id='$id'";
+    $query = "DELETE FROM posts WHERE id='$id'";
     $query_run = mysqli_query($connection,$query);
 
     if($query_run)

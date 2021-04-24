@@ -18,7 +18,7 @@ session_start();
                 if(isset($_POST['edit_btn']))
                 {
                     $id = $_POST['edit_id'];
-                    $query = "SELECT id, title, camera, photographe, date FROM post WHERE id='$id' ";
+                    $query = "SELECT id, title, image, photographe,  FROM posts WHERE id='$id' ";
                     $query_run = mysqli_query($connection,$query);
                 
                     foreach($query_run as $row)
@@ -32,16 +32,12 @@ session_start();
                 <input type="text" name="edit_title" value="<?php echo $row['title'] ?>" class="form-control" placeholder="Enter Username">
             </div>
             <div class="form-group">
-                <label >Camera</label>
+                <label >Image</label>
                 <input type="text" name="edit_camera" value="<?php echo $row['camera'] ?>" class="form-control" placeholder="Enter Username">
             </div>
             <div class="form-group">
                 <label >Potographe</label>
                 <input type="text" name="edit_photographe" value="<?php echo $row['photographe'] ?>" class="form-control" placeholder="Enter Email">
-            </div>
-            <div class="form-group">
-                <label >Date</label>
-                <input type="date" name="edit_date" value="<?php echo $row['date'] ?>" class="form-control" placeholder="Enter Password">
             </div>
                 <a href="register1.php" class="btn btn-danger"> Cancel </a>
             <button type="submit" name="updatebtn" class="btn btn-primary"> Update </button>

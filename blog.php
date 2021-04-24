@@ -59,75 +59,31 @@
              </div>
           </nav>
     </div>
-    <!-- col -->
-    <div class="row " style="margin-right: 0%;">
-      <div class="col">
-        <div class="card" style="width: 25rem;">
-          <img id="img1"  src="image/camera1.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Camera</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="View.html" class="btn btn-primary">Go somewhere</a>
-          </div>
+    <!--card-->
+    <div class="container">
+
+    <div class="row ">
+    <?php 
+    $connection = mysqli_connect("localhost","root","","registration");
+
+    $query = "SELECT * FROM posts ";
+    $query_run = mysqli_query($connection, $query);
+    $row = mysqli_fetch_array($query_run); 
+    foreach($row as $ro) { ?>
+        <div class="col mb-5">
+            <div class="card" style="width: 350px;min-height:550px">
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $row['title'];?></h5>
+                  <h5 class="card-Subtitle"><?php echo $row['image'];?></h5>
+                  <p class="card-text"><td><?php echo $row['photographe'];?></td></p>
+                  <a href="../view.php" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
         </div>
+    <?php }  ?>
+
       </div>
-      <div class="col">
-        <div class="card" style="width: 25rem;">
-          <img id="img1"  src="image/camera2.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Camera</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="View.html" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 25rem;">
-          <img id="img1"  src="image/camera3.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Camera</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="View.html" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 25rem;">
-          <img id="img1"  src="image/camera4.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Camera</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="View.html" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 25rem;">
-          <img id="img2"   src="image/camera5.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Camera</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="View.html" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 25rem;">
-          <img  id="img3" src="image/camera6.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Camera</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-    </div> 
+
     <section id="footer" class=" ">
       <div class="row m-auto">
           <div class="col text-center">

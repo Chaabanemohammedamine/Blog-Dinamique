@@ -22,16 +22,12 @@ session_start();
             <input type="text" name="title" class="form-control" placeholder="Enter le titre">
         </div>
         <div class="form-group">
-            <label >Camera</label>
-            <input type="text" name="camera" class="form-control" placeholder="Enter le nom de camera">
+            <label >Image</label>
+            <input type="image" name="image" class="form-control" placeholder="Enter le nom de camera">
         </div>
         <div class="form-group">
             <label >Photographe</label>
             <input type="text" name="photographe" class="form-control" placeholder="Enter  le nom du phtographe">
-        </div>
-        <div class="form-group">
-            <label >Date</label>
-            <input type="date" name="date" class="form-control" placeholder="Enter la date">
         </div>
       </div>
       <div class="modal-footer">
@@ -69,7 +65,7 @@ session_start();
             <div class="table-reponsive">
                 <?php
                 $connection = mysqli_connect("localhost","root","","registration");
-                $query = "SELECT id, title, camera, photographe, date FROM post";
+                $query = "SELECT id, title, image, photographe FROM posts";
                 $query_run = mysqli_query($connection,$query);
                 
                 ?>
@@ -78,9 +74,8 @@ session_start();
                         <tr>
                             <th>ID</th>
                             <th>Title</th>
-                            <th>Camera</th>
+                            <th>Image</th>
                             <th>Photographe</th>
-                            <th>Date</th>
                             <th>Edit</th>
                             <th>Dellete</th>
                         </tr>
@@ -96,9 +91,8 @@ session_start();
                        <tr>
                             <td><?php echo $row['id']; ?></td>
                             <td><?php echo $row['title'];?></td>
-                            <td><?php echo $row['camera'];?></td>
+                            <td><?php echo $row['image'];?></td>
                             <td><?php echo $row['photographe'];?></td>
-                            <td><?php echo $row['date'];?></td>
                             <td>
                             <form action="register_edit.php" method="POST">
                             <input type="hidden" name="edit_id" value="<?php echo $row['id'];?>">
